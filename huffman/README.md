@@ -7,7 +7,7 @@
 ./huffman/huff.c ./huffman/encode.txt
 ```
 
-![1-1](README\1-1.png)
+![1-1](README/1-1.png)
 
 上图是把 `huff.c` 的内容进行 哈夫曼 压缩，生成 `encode.txt`。
 
@@ -19,7 +19,7 @@
 ./huffman/encode.txt ./huffman/decode.txt
 ```
 
-![1-2](README\1-2.png)
+![1-2](README/1-2.png)
 
 上图是把 `encode.txt`的内容进行 哈夫曼 解缩，生成 `decode.txt`。
 
