@@ -8,8 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../lib/bitio.h"
-#include "../lib/errhand.h"
+#include "bitio.h"
+#include "errhand.h"
 
 char *CompressionName = "Adaptive Huffman coding, with escape codes";
 char *Usage           = "infile outfile [ -d ]";
@@ -900,7 +900,7 @@ int row;
         }
         for ( ; current_col < print_col ; current_col++ )
             putc( ' ', stdout );
-        printf( buffer );
+        printf("%s \n",buffer );
         current_col += print_size;
         node = positions[ node ].next_member;
     }

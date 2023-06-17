@@ -1,10 +1,10 @@
-# 普通的哈夫曼编解码的实现
-`huff_c` 是压缩程序，`huff_e` 是解压缩程序。
+# 可适应的哈夫曼编解码的实现
+`huff_adaptive_c` 是压缩程序，`huff_adaptive_e` 是解压缩程序。
 
-调试 `huff_c` 程序的 clion 配置如下：
+调试 `huff_adaptive_c` 程序的 clion 配置如下：
 
 ```
-./huffman/huff.c ./huffman/encode.txt
+./huffman_adaptive/huff_adaptive.c ./huffman_adaptive/encode.txt
 ```
 
 ![1-1](README\1-1.png)
