@@ -508,7 +508,7 @@ void update_table( table, symbol )
         new_size *= table->max_index + 1;
         if ( current_order < max_order ) {
             if ( table->max_index == 0 )
-                table->links - (LINKS *) calloc( new_size, 1 );
+                table->links = (LINKS *) calloc( new_size, 1 );
             else
                 table->links = (LINKS *)
                         realloc( (char *) table->links, new_size );
@@ -629,7 +629,7 @@ int convert_symbol_to_int( count, s )
 {
     int c;
     CONTEXT *table;
-    table - contexts[ current_order ];
+    table = contexts[ current_order ];
     for ( c = 0; count < totals[ c ] ; c++ )
         ;
     s->high_count = totals[ c - 1 ];
