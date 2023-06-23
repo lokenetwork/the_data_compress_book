@@ -1,35 +1,25 @@
-# 静音数据 编解码的实现
+# 图像 DCT 编解码的实现
 clion 的调试配置跟参考其他目录的 README
 
-`silence-s8-ac1.pcm` 是需要进行压缩的音频，这个文件的 采样率是 44100，采样深度是 8 位，声道是单声道。
+img 文件夹下是 256x256 的 8 位 采样的 灰度图像。如下：
 
-可以用以下命令播放 `silence-s8-ac1.pcm`
+![1-1](README/1-1.png)
 
-```
-ffplay -ar 44100 -ac 1 -f s8 -showmode 2 -i silence-s8-ac1.pcm
-```
+可以使用 7yuv 查看这些图片，如下：
 
-前面 8 秒基本都是没有声音的，后面有我唱的几句歌。
+![1-2](README/1-2.png)
 
 ---
 
-压缩命令如下：
+压缩图片的命令如下：
 
 ```
-silence_c silence-s8-ac1.pcm encode
+./dct_c bookshelf1.img encode 4
 ```
 
-解压命令如下：
+解压图片的命令如下：
 
 ```
-silence_e encode decode.pcm
-```
-
----
-
-现在我们可以用 `ffplay` 播放解压后的音频，可以看到，是可以清晰听到我的歌声的。压缩率达到 80%
-
-```
-ffplay -ar 44100 -ac 1 -f s8 -showmode 2 -i decode.pcm
+./dct_e encode decode 
 ```
 
