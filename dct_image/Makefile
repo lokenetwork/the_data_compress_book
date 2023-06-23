@@ -1,8 +1,8 @@
 # first so "all" becomes default target
-all: silence_c silence_e
+all: dct_c dct_e
 
-silence_c: main-c.c silence.c bitio.c errhand.c
-	gcc -g -o silence_c $^
+dct_c: main-c.c dct.c bitio.c errhand.c
+	gcc -g -o dct_c $^ -lm
 
-silence_e: main-e.c silence.c bitio.c errhand.c
-	gcc -g -o silence_e $^
+dct_e: main-e.c dct.c bitio.c errhand.c
+	gcc -g -o dct_e $^ -lm
